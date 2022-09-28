@@ -13,10 +13,27 @@ public class Friend {
         public Boolean isFriend() {
             return this.isFriend;
         }
-        public void getHP() {
-            System.out.println(name + " has " + this.hp + " liv kvar!");
+
+        //HP
+        public int getHP() {
+            return this.hp;
         }
         public void setHP(int newHP) {
             this.hp = newHP;
+        }
+
+        //DMG
+        public int getDMG() {
+            return this.dmg;
+        }
+        public void setDMG(int dmg) {
+            this.dmg = dmg;
+        }
+        //NAME
+        public String getName() {
+            return this.name;
+        }
+        public void setName(String name) {
+            this.name = name;
         }
 }
