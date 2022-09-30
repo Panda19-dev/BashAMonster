@@ -1,12 +1,14 @@
 public class Friend {
 
         String name;
-        int hp;
+        int maxHP;
+        int hp = maxHP;
         int dmg;
         boolean isFriend;
-        public Friend(String name, int hp, int dmg, boolean isFriend) {
+        boolean life = true;
+        public Friend(String name, int maxHP, int dmg, boolean isFriend) {
             this.name = name;
-            this.hp = hp;
+            this.maxHP = maxHP;
             this.dmg = dmg;
             this.isFriend = isFriend;
         }
@@ -22,6 +24,15 @@ public class Friend {
             this.hp = newHP;
         }
 
+        //MAXHP
+        public int getMaxHP() {
+            return this.maxHP;
+        }
+
+        public void setMaxHP(int NewMaxHP) {
+            this.maxHP = NewMaxHP;
+        }
+
         //DMG
         public int getDMG() {
             return this.dmg;
@@ -35,5 +46,12 @@ public class Friend {
         }
         public void setName(String name) {
             this.name = name;
+        }
+        //Life
+        public boolean isAlive() {
+            return this.life;
+        }
+        public void setLife(boolean life) {
+            this.life = life;
         }
 }
