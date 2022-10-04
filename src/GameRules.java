@@ -16,12 +16,18 @@ public class GameRules {
                 hp -= dmg;
                 if(hp <= 0) {
                     enemy.setLife(false);
+                    enemy.setHP(0);
                     System.out.println("You killed the enemy!");
                 } else {
+                    enemy.setHP(hp);
                     System.out.println("You did " + dmg + " damage to the enemy");
                     System.out.println("The enemy now has " + hp + "hp left");
                 }
+            } else {
+                System.out.println("The enemy " + enemy.getName() + " is not alive!");
             }
+        } else {
+            System.out.println("You can´t damage your friends!");
         }
     }
 
