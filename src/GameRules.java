@@ -10,7 +10,7 @@ public class GameRules {
 
     public void DMG(Friend friend, Friend enemy) {
         if(!enemy.isFriend) {
-            if(enemy.getHP() > 0) {
+            if(enemy.isAlive()) {
                 int dmg = friend.getDMG();
                 int hp = enemy.getHP();
                 hp -= dmg;
